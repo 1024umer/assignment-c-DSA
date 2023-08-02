@@ -21,16 +21,16 @@ int FixingCodeInProduction(int arr[], int n, int num) {
 }
 
 int main() {
-    int numFiles = 5; // The number of input files you have
+    int numFiles = 5; 
 	int fileNum;
     for ( fileNum = 1; fileNum <= numFiles; fileNum++) {
-        char fileName[100]; // Adjust the size as needed for your file names
-        sprintf(fileName, "input%d.txt", fileNum); // Construct the file name
+        char fileName[100]; 
+        sprintf(fileName, "input%d.txt", fileNum); 
 
         FILE *file = fopen(fileName, "r");
         if (file == NULL) {
             printf("Error opening the file %s.\n", fileName);
-            continue; // Move to the next file
+            continue; 
         }
 
         int num;

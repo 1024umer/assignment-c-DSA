@@ -20,9 +20,9 @@ int BribedQueue(int n, int arr[]) {
 }
 
 int main() {
-    int numFiles = 4; // The number of input files you have
+    int numFiles = 4;
 
-    // Array to store the result for each input file
+   
     int *results = (int *)malloc(numFiles * sizeof(int));
     if (results == NULL) {
         printf("Memory allocation error for results array.\n");
@@ -30,14 +30,14 @@ int main() {
     }
 	int fileNum;
     for (fileNum = 1; fileNum <= numFiles; fileNum++) {
-        char fileName[100]; // Adjust the size as needed for your file names
-        sprintf(fileName, "input%d.txt", fileNum); // Construct the file name
+        char fileName[100]; 
+        sprintf(fileName, "input%d.txt", fileNum); 
 
         FILE *file = fopen(fileName, "r");
         if (file == NULL) {
             printf("The File %s is Empty.\n", fileName);
-            results[fileNum - 1] = -1; // Mark -1 for the corresponding file
-            continue; // Move to the next file
+            results[fileNum - 1] = -1; 
+            continue; 
         }
 
         int n;
@@ -65,7 +65,7 @@ int main() {
         free(arr);
     }
 
-    // Print the results for all input files
+    
     int fileNums;
 	for (fileNums = 1; fileNums <= numFiles; fileNums++) {
         if (results[fileNum - 1] >= 0) {
