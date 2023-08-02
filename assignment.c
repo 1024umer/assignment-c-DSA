@@ -22,7 +22,7 @@ int BribedQueue(int n, int arr[]) {
 int main() {
     FILE *file = fopen("input.txt", "r");
     if (file == NULL) {
-        printf("Error opening the file.\n");
+        printf("The File is Empty.\n");
         return 1;
     }
 
@@ -48,7 +48,7 @@ int main() {
 
     int result = BribedQueue(n, arr);
     if (result >= 0) {
-        printf("Number of bribes: %d\n", result);
+        printf("Number of bribes are: %d\n", result);
     }
 
     free(arr);

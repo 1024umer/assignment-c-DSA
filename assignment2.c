@@ -22,7 +22,7 @@ int GoingOffTheCharts(int n, int arr[]) {
 int main() {
   FILE *file = fopen("input2.txt", "r");
   if (file == NULL) {
-    printf("Error opening the file.\n");
+    printf("The File is empty.\n");
     return 1;
   }
 
