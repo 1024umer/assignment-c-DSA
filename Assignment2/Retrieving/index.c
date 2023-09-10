@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <string.h>
 
 struct node {
     int data;
@@ -71,7 +72,9 @@ int main() {
     fclose(file);
 
     int trump = get_trump();
+    printf(" result is: %d\n", trump); 
 
     return 0;
 }
+
 
